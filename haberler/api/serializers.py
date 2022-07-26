@@ -21,6 +21,7 @@ class MakaleSerializer(serializers.Serializer):
 
     
     def update(self, instance, validated_data):
+        # update işleminde instance ile kontrol işlemi yapıyoruz,bir nevi id gibi
         instance.yazar = validated_data.get('yazar', instance.yazar)
         instance.baslik = validated_data.get('baslik', instance.baslik)
         instance.aciklama = validated_data.get('aciklama', instance.aciklama)
